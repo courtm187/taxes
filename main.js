@@ -1,26 +1,18 @@
-//question: how
+
 
 module.exports = {
   calcTax: function(income){
     if (income < 10){
-      var a;
-      a = income * 0.10;
-      return a;
+      return income * 0.10;
       }
-    if (income >= 10 && income < 20){
-      var b;
-      b = a + ((income - 10)*0.07);
-      return b;
+    else if (income >= 10 && income < 20){
+      return 1 + ((income - 10)*0.07);
     }
-    if (income >= 20 && income < 30){
-      var c;
-      c = b + ((income - 20)*0.05);
-      return c;
+    else if (income >= 20 && income < 30){
+      return 1.7 + ((income - 20)*0.05);
     }
-  if (income >=30){
-      var d;
-      d = c + ((income - 30)*0.03);
-      return d;
+  else if (income >=30){
+      return 2.3 + ((income - 30)*0.03);
     }
   }
 };
